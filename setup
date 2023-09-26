@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# brew packages to install
+# fzf
+# nvim exa hugo
+# bash-completion@2
+# newsboat
+# starship
+
+# create directories
+export XDG_CONFIG_HOME="$HOME"/.config
+mkdir -p "$XDG_CONFIG_HOME"/bash
+mkdir -p "$XDG_CONFIG_HOME"/wezterm
+
+# set up git prompt
+# curl -L https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh >"$XDG_CONFIG_HOME"/bash/gitprompt.sh
+
+# Symbolic links
+
+#ln -sf "$PWD/alacritty.yml" "$XDG_CONFIG_HOME"/alacritty/alacritty.yml
+ln -sf "$PWD/wezterm.lua" "$XDG_CONFIG_HOME"/wezterm
+ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
+ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
+ln -sf "$PWD/.inputrc" "$HOME"/.inputrc
+ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
+ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+ln -sf "$PWD/newsboat/config" "$HOME"/.newsboat/config
+ln -sf "$PWD/newsboat/urls" "$HOME"/.newsboat/urls
+
+# Second Brain
+# This one's a little tricky because the path contains a space. It needs to be stored as an array,
+# and when called it needs to be quoted.
+# export SECOND_BRAIN=("/Users/mischa/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain-01-07-23")
+# ln -sf "$SECOND_BRAIN" ~/second-brain
+#
+# iCloud
+# export ICLOUD=("/Users/mischa/Library/Mobile Documents/com~apple~CloudDocs")
+# ln -sf "$ICLOUD" ~/icloud
