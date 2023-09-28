@@ -19,7 +19,7 @@ export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dotfiles"
 export LAB="$GHREPOS/lab"
 export SCRIPTS="$DOTFILES/scripts"
-export BROWSER="arc"
+export BROWSER="wslview"
 export ICLOUD="$HOME/icloud"
 export SECOND_BRAIN="$HOME/second-brain"
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -61,22 +61,7 @@ clone() {
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-# Explicitly unset color (default anyhow). Use 1 to set it.
-export GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_DESCRIBE_STYLE="branch"
-# export GIT_PS1_SHOWUPSTREAM="auto git"
-
-if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
-	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
-fi
-
 eval "$(starship init bash)"
-
-# colorized prompt
-# PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -96,6 +81,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 # sourcing
+source /usr/share/nvm/init-nvm.sh
 source "$HOME/.privaterc"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

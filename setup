@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# brew packages to install
+# pacman packages to install
 # fzf
 # nvim exa hugo
 # bash-completion@2
