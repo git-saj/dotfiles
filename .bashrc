@@ -61,18 +61,6 @@ clone() {
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-# Explicitly unset color (default anyhow). Use 1 to set it.
-export GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_DESCRIBE_STYLE="branch"
-# export GIT_PS1_SHOWUPSTREAM="auto git"
-
-if [[ -f "$XDG_CONFIG_HOME/bash/gitprompt.sh" ]]; then
-	source "$XDG_CONFIG_HOME/bash/gitprompt.sh"
-fi
-
 eval "$(starship init bash)"
 
 # colorized prompt
@@ -97,6 +85,9 @@ export EDITOR=nvim
 
 # sourcing
 source "$HOME/.privaterc"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	source "$HOME/.fzf.bash"

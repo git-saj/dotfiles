@@ -14,8 +14,6 @@ return {
         "regex",
         "vim",
         "yaml",
-        "go",
-        "bicep",
       },
     },
   },
