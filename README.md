@@ -1,16 +1,16 @@
 # dotfiles
 collection of dotfiles used for the configuration of arch
 
-## pacman packages to install
+## packages to install
 - AUR repository
 - fzf
-- nvim
+- neovim
 - bash-completion
 - kubectl
 - newsboat
 - starship
-- gh
-- wslu
+- github-cli
+- wslu (require wslu repo)
 - openssh
 - ripgrep
 - fd
@@ -21,7 +21,8 @@ collection of dotfiles used for the configuration of arch
 - python-pynvim
 - nodejs
 - npm
-- nvm
+- nvm (done via script from github)
+- unzip
 
 ## execute setup
 ```bash
